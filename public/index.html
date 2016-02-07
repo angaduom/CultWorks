@@ -1,0 +1,144 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+</head>
+<script>
+  $(function() {
+    console.log('wasup');
+    $('#Mugs').hide();
+    $('#Hoodies').hide();
+    var tabs = ['T-shirts', 'Mugs', 'Hoodies']
+
+    //this is the tabs function, animations can be added later but for now the
+    //button text and the div id should have same text
+    $('.tab-links button').on('click', function(e) {
+      console.log("this is the tab that was clicked");
+      var buttonText = $(this).text();
+      console.log(buttonText);
+      tabs.map(function(tab) {
+        console.log('here is the tab map ' + tab);
+        var id = '#';
+        id += tab;
+
+        if (tab === buttonText) {
+          console.log('here in the if ' + id)
+          $(id).show();
+        } else {
+          console.log('hideeeee')
+          $(id).hide();
+        }
+      })
+    });
+
+
+  })
+</script>
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <!--this is really stupid and must change it-->
+      <div class='tab-links center'>
+        <div class="col-md-4 col-sm-4">
+          <button>T-shirts</button>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <button>Mugs</button>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <button>Hoodies</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tabs-container row">
+      <!--shirts tab -->
+      <div class="tab" id="T-shirts">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion3.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion1.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion1.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion2.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion2.jpg"></img>
+          </div>
+        </div>
+      </div>
+      <!--shirts tab -->
+      <!--mugs tab -->
+      <div class="tab" id="Mugs">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion1.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion2.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion3.jpg"></img>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+        </div>
+      </div>
+      <!--mugs tab -->
+      <!--Hoodies tab -->
+      <div class="tab" id="Hoodies">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+          <div class="col-md-4 col-sm-4 div-hover">
+            <img src="./imgs/fashion4.jpg"></img>
+          </div>
+        </div>
+      </div>
+      <!--Hoodies tab -->
+
+    </div>
+  </div>
+</body>
+
+</html>
